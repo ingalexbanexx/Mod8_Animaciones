@@ -2,3 +2,38 @@
 // .skill-card, .map-card, .contact-form-card y componentes relacionados.
 // Las reglas vigentes están en _legacy.scss hasta completar la migración verificada.
 
+.feature-card {
+  @include transition-interactive(
+    transform,
+    250ms,
+    ease-in-out
+  );
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.project-card {
+  @include transition-interactive(
+    transform,
+    250ms,
+    ease-in-out
+  );
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.service-card {
+  @include transition-interactive(
+    transform,
+    250ms,
+    ease-in-out
+  );
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
