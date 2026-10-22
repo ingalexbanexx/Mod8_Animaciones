@@ -670,7 +670,7 @@ h1 span {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media (max-width: 600px) {
+@media (max-width: variables.$breakpoint-mobile) {
   .hero-grid {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -813,7 +813,7 @@ h1 span {
   color: var(--muted);
   margin: 0;
 }
-@media (max-width: 767px) {
+@media (max-width: variables.$breakpoint-tablet) {
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -825,20 +825,20 @@ h1 span {
 /* ===== AlexBanexx Soluciones IT · identidad neon futurista ===== */
 :root {
   --ink: #f5fdff;
-  --navy: #0a0a0a;
-  --slate: #2a2a2a;
-  --accent: #00f0ff;
-  --paper: #0a0a0a;
-  --muted: #b7c9d1;
+  --navy: vars.$color-black;
+  --slate: vars.$color-slate;
+  --accent: vars.$color-accent;
+  --paper: vars.$color-black;
+  --muted: vars.$color-muted;
   --line: rgba(0, 240, 255, 0.24);
-  --white: #fff;
+  --white: vars.$color-white;
   --radius: 1.1rem;
-  --electric: #00f0ff;
-  --midnight: #191970;
+  --electric: vars.$color-electric;
+  --midnight: vars.$color-midnight;
 }
 html,
 body {
-  background: #0a0a0a;
+  background: vars.$color-black;
   color: #f5fdff;
 }
 body {
@@ -848,7 +848,7 @@ body {
       rgba(0, 240, 255, 0.11),
       transparent 55%
     ),
-    linear-gradient(180deg, #0a0a0a, #080a12 48%, #0a0a0a);
+    linear-gradient(180deg, vars.$color-black, #080a12 48%, vars.$color-black);
 }
 a {
   color: #dffcff;
@@ -919,7 +919,7 @@ a:hover {
 }
 .brand-copy strong {
   font-size: clamp(0.95rem, 1.5vw, 1.45rem);
-  color: #00f0ff;
+  color: vars.$color-cian;
   text-transform: uppercase;
   text-shadow: 0 0 13px rgba(0, 240, 255, 0.4);
 }
@@ -1033,21 +1033,21 @@ h1 span {
   filter: drop-shadow(0 0 26px rgba(0, 240, 255, 0.12));
 }
 .btn-accent {
-  background: linear-gradient(120deg, #00f0ff, #7cf8ff 45%, #191970);
-  border: 1px solid #00f0ff;
-  color: #05070a;
+  background: linear-gradient(120deg, vars.$color-cian, vars.$color-cian 45%, vars.$color-negro);
+  border: 1px solid vars.$color-cian;
+  color: vars.$color-negro;
   box-shadow: 0 0 20px rgba(0, 240, 255, 0.18);
 }
 .btn-accent:hover,
 .btn-accent:focus {
-  background: #fff;
+  background: vars.$color-white !important;
   border-color: #fff;
   color: #05070a;
   box-shadow: 0 0 22px rgba(0, 240, 255, 0.32);
 }
 .btn-accent:active {
-  background: #00f0ff !important;
-  color: #000 !important;
+  background: vars.$color-cian !important;
+  color: vars.$color-negro !important;
 }
 .text-link {
   border-color: rgba(0, 240, 255, 0.5);
@@ -1437,7 +1437,7 @@ h1 span {
       rgba(10, 10, 10, 0.98) 100%
     );
 
-  border-bottom: 1px solid #00F0FF;
+  border-bottom: 1px solid vars.$color-cian;
   box-shadow: 0 5px 26px rgba(0, 240, 255, 0.15);
   isolation: isolate;
 }
@@ -1469,9 +1469,9 @@ h1 span {
   background: linear-gradient(
     90deg,
     transparent,
-    #00F0FF,
+    vars.$color-cian,
     #187BFF,
-    #00F0FF,
+    vars.$color-cian,
     transparent
   );
 
@@ -1486,7 +1486,7 @@ h1 span {
   gap: 0.7rem;
 
   margin-right: 1rem;
-  color: #FFFFFF;
+  color: vars.$color-white;
   font-weight: 800;
   text-decoration: none;
   white-space: nowrap;
@@ -1504,7 +1504,7 @@ h1 span {
 
 /* Nombre de la empresa */
 .site-navbar .brand-title {
-  color: #FFFFFF;
+  color: vars.$color-white;
   font-size: 1rem;
   font-weight: 800;
   line-height: 1.15;
@@ -1515,7 +1515,7 @@ h1 span {
   display: block;
   margin-top: 4px;
 
-  color: #00F0FF;
+  color: vars.$color-cian;
   font-size: 0.73rem;
   font-weight: 600;
   letter-spacing: 0.13em;
@@ -1525,7 +1525,7 @@ h1 span {
 .site-navbar .nav-link {
   padding: 0.6rem 0.7rem !important;
 
-  color: #FFFFFF;
+  color: vars.$color-white;
   font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1546,14 +1546,14 @@ h1 span {
 .site-navbar .nav-link:hover,
 .site-navbar .nav-link:focus-visible,
 .site-navbar .nav-link.active {
-  color: #00F0FF;
+  color: vars.$color-cian;
   background: rgba(0, 240, 255, 0.07);
-  border-bottom-color: #00F0FF;
+  border-bottom-color: vars.$color-cian;
   text-shadow: 0 0 10px rgba(0, 240, 255, 0.45);
 }
 
 .site-navbar .nav-link:active {
-  color: #FFFFFF;
+  color: vars.$color-white;
   background: #191970;
   transform: scale(0.97);
 }
@@ -1561,7 +1561,7 @@ h1 span {
 /* Botón hamburguesa */
 .site-navbar .navbar-toggler {
   padding: 0.4rem 0.6rem;
-  border: 1px solid #00F0FF;
+  border: 1px solid vars.$color-cian;
   box-shadow: none;
 }
 
@@ -1597,7 +1597,7 @@ h1 span {
   padding: 5px 6px;
   border-radius: 7px;
 
-  color: #00F0FF;
+  color: vars.$color-cian;
   font-size: 1.1rem;
   font-weight: 800;
   line-height: 1.1;
@@ -1616,14 +1616,14 @@ h1 span {
 
 .site-navbar .header-social a:hover,
 .site-navbar .header-social a:focus-visible {
-  color: #FFFFFF;
+  color: vars.$color-white;
   background: rgba(0, 240, 255, 0.1);
   box-shadow: 0 0 14px rgba(0, 240, 255, 0.3);
   transform: translateY(-2px);
 }
 
 /* Tablet y pantallas intermedias */
-@media (max-width: 1199.98px) {
+@media (max-width: variables.$breakpoint-wide) {
   .site-navbar .header-social {
     margin-left: 0.4rem;
     padding-left: 0.4rem;
@@ -1640,7 +1640,7 @@ h1 span {
 }
 
 /* Celulares */
-@media (max-width: 991.98px) {
+@media (max-width: variables.$breakpoint-navbar) {
   .site-navbar .navbar-collapse {
     padding-top: 0.8rem;
   }
@@ -1673,7 +1673,7 @@ h1 span {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: variables.$breakpoint-small) {
   .site-navbar .brand-logo {
     width: 52px;
     height: 42px;
@@ -1706,7 +1706,7 @@ h1 span {
       115deg,
       #191970 0%,
       #0b1520 48%,
-      #0A0A0A 100%
+      vars.$color-black 100%
     );
   border-top: 1px solid rgba(0, 240, 255, 0.35);
   border-bottom: 1px solid rgba(0, 240, 255, 0.35);
@@ -1748,7 +1748,7 @@ h1 span {
 
 /* Contacto: mapa y formulario */
 .contact-location {
-  background: #0A0A0A;
+  background: vars.$color-black;
 }
 
 .contact-location__grid {
@@ -1773,7 +1773,7 @@ h1 span {
 }
 
 .map-card:hover {
-  border-color: #00F0FF;
+  border-color: vars.$color-cian;
   box-shadow: 0 0 24px rgba(0, 240, 255, 0.2);
 }
 
@@ -1788,7 +1788,7 @@ h1 span {
 .map-card__link {
   display: block;
   padding: 13px 16px;
-  color: #00F0FF;
+  color: vars.$color-cian;
   font-weight: 700;
   text-align: center;
   border-top: 1px solid rgba(0, 240, 255, 0.25);
@@ -1799,7 +1799,7 @@ h1 span {
 
 .map-card__link:hover,
 .map-card__link:focus-visible {
-  color: #FFFFFF;
+  color: vars.$color-white;
   background: rgba(0, 240, 255, 0.09);
 }
 
@@ -1815,13 +1815,13 @@ h1 span {
 }
 
 .map-card__icon {
-  color: #00F0FF;
+  color: vars.$color-cian;
   font-size: 1.6rem;
 }
 
 .map-card__details h3 {
   margin: 0 0 6px;
-  color: #FFFFFF;
+  color: vars.$color-white;
 }
 
 .map-card__details p {
@@ -1834,7 +1834,7 @@ h1 span {
 .contact-form-card {
   min-width: 0;
   padding: 24px;
-  color: #FFFFFF;
+  color: vars.$color-white;
   background:
     linear-gradient(145deg, #151e28, #0d1117);
   border: 1px solid rgba(0, 240, 255, 0.35);
@@ -1849,8 +1849,8 @@ h1 span {
 .contact-form-card .field textarea {
   width: 100%;
   max-width: 100%;
-  color: #FFFFFF;
-  background: #0A0A0A;
+  color: vars.$color-white;
+  background: vars.$color-black;
   border: 1px solid #38505e;
   border-radius: 7px;
   padding: 12px;
@@ -1862,7 +1862,7 @@ h1 span {
 
 .contact-form-card .field input:focus,
 .contact-form-card .field textarea:focus {
-  border-color: #00F0FF;
+  border-color: vars.$color-cian;
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.15);
 }
@@ -1892,7 +1892,7 @@ h1 span {
 }
 
 /* Teléfonos pequeños */
-@media (max-width: 480px) {
+@media (max-width: variables.$breakpoint-small) {
   .map-card iframe {
     height: 260px;
   }

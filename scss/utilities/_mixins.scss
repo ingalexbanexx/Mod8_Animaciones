@@ -7,7 +7,7 @@
   }
 }
 
-@mixin neon-focus($color: #00f0ff) {
+@mixin neon-focus($color: vars.$color-cian) {
   outline: 2px solid $color;
   outline-offset: 3px;
 }
@@ -20,7 +20,7 @@
 
 @mixin transition-interactive(
   $property: transform,
-  $duration: 250ms,
+  $duration: variables.$motion-duration,
   $easing: ease
 ) {
   transition: $property $duration $easing;

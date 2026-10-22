@@ -4,8 +4,8 @@
 %interactive-surface {
   border-radius: 1rem;
   transition:
-    transform 250ms ease,
-    box-shadow 250ms ease;
+    transform variables.$motion-duration ease,
+    box-shadow variables.$motion-duration ease;
 }
 
 .btn-accent {

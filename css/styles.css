@@ -943,10 +943,10 @@ h1 span {
 /* ===== AlexBanexx Soluciones IT · identidad neon futurista ===== */
 :root {
   --ink: #f5fdff;
-  --navy: #0a0a0a;
+  --navy: vars.$color-black;
   --slate: #2a2a2a;
   --accent: #00f0ff;
-  --paper: #0a0a0a;
+  --paper: vars.$color-black;;
   --muted: #b7c9d1;
   --line: rgba(0, 240, 255, 0.24);
   --white: #fff;

@@ -5,35 +5,35 @@
 .feature-card {
   @include transition-interactive(
     transform,
-    250ms,
+    variables.$motion-duration,
     ease-in-out
   );
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-variables.$motion-distance);
   }
 }
 
 .project-card {
   @include transition-interactive(
     transform,
-    250ms,
+    variables.$motion-duration,
     ease-in-out
   );
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-variables.$motion-distance);
   }
 }
 
 .service-card {
   @include transition-interactive(
     transform,
-    250ms,
+    variables.$motion-duration,
     ease-in-out
   );
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-variables.$motion-distance);
   }
 }
